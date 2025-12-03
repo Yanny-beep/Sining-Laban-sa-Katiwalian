@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="tl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="assets/logo1.webp" type="image/x-icon" />
+    <title>Sining Laban sa Katiwalian â€“ Virtual Museum</title>
+    <meta name="theme-color" content="#0b0202" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-circle">
+                    <img src="assets/logo1.webp" alt="Logo">
+                </div>
+                <div class="loading-rings">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div>
+            </div>
+            <h2 class="loading-title">Sining Laban sa Katiwalian</h2>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Preparing your experience...</p>
+        </div>
+    </div>
+    <nav id="topNav" role="navigation">
+        <div class="logo">Sining Laban sa Katiwalian</div>
+        <div class="nav-links">
+            <a href="#collections">Collection</a>
+            <a href="#tungkol">About</a>
+            <div class="user-profile" title="Profile" aria-hidden="true"></div>
+        </div>
+    </nav>
+    <div class="particles-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    <main>
+        <!-- Hero (snap 1) -->
+        <section id="hero" class="snap-section" aria-label="Hero">
+            <header class="hero" id="homeSection">
+                <div class="hero-inner">
+                    <div class="hero-left">
+                        <h1 class="main-title">Sining Laban sa Katiwalian</h1>
+                        <p class="lead">“Sining Laban sa Katiwalian” is a creative movement that integrates various art
+                            forms including visual, applied, literary, and performative arts to reveal the social,
+                            cultural, political, historical, and economic realities of corruption in the Philippines.
+                        </p>
+                        <div class="cta-row">
+                            <button class="btn" id="discoverBtn">Discover</button>
+                            <a href="#collections"><button class="btn ghost" id="exploreBtn">Learn more</button></a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="cframe" id="heroFrame">
+                            <div class="hero-rings">
+                                <div class="hero-ring"></div>
+                                <div class="hero-ring"></div>
+                                <div class="hero-ring"></div>
+                            </div>
+                            <img src="assets/logo1.png" alt="Sining Para sa Pagbabago">
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <!-- Collections (snap 2) -> contains both Categories + Featured -->
+        <section id="collections" class="snap-section" aria-label="Collections">
+            <!-- Categories -->
+            <div class="category-section">
+                <div class="category-inner">
+                    <div class="tabs" role="tablist" aria-label="Filters">
+                        <button class="tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+                        <button class="tab" data-filter="visual" role="tab">Visual Arts</button>
+                        <button class="tab" data-filter="literature" role="tab">Literature</button>
+                        <button class="tab" data-filter="applied" role="tab">Applied Arts</button>
+                        <button class="tab" data-filter="performance" role="tab">Performance Arts</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured collection -->
+            <div class="featured">
+                <div class="featured-inner">
+                    <div class="section-header">
+                        <h2>Featured Collections</h2>
+                        <div class="hint" style="color:var(--muted);font-weight:700">Click an artwork to view details
+                        </div>
+                    </div>
+                    <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tungkol (snap 3) -->
+        <!-- About + Contact + Stats Combined (snap 3) -->
+        <section id="aboutConnect" class="snap-section" aria-label="About and Contact">
+            <div class="ac-container">
+                <h3 class="ac-title">About the Virtual Museum</h3>
+                <p class="ac-subtitle">
+                    A unified space for learning, reflection, and connection.
+                </p>
+
+                <div class="ac-grid">
+                    <!-- About -->
+                    <div class="ac-card">
+                        <h4>What is "Sining Laban sa Katiwalian"?</h4>
+                        <p>
+                            "Sining Laban sa Katiwalian" is a 3-day online art exhibit held from
+                            December 4-6, 2025 as ZC11's project in Art Appreciation. The exhibit
+                            aims to expose the realities of corruption in the Philippines through
+                            visual, applied, literary, and performance art. By the end of this
+                            museum experience, viewers are encouraged to reflect, stay aware, and
+                            uphold social responsibility.
+                        </p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="ac-card">
+                        <h4>Connect With Us</h4>
+                        <p>For concerns, collaborations, or inquiries, you may reach us here:</p>
+                        <a href="https://www.facebook.com/people/ZC11-Sining-Laban-sa-Katiwalian/61583848871735/"
+                            target="_blank" class="ac-fb-btn">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 
+                         5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 
+                         1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83
+                         c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385
+                         C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                            Visit Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Inline Stats at Bottom -->
+                <h3 class="stats-title">Museum Statistics</h3>
+                <p class="stats-subtitle">Live overview of user interaction</p>
+
+                <div class="inline-stats">
+                    <div class="inline-stat">
+                        <div class="inline-stat-icon">
+                            <!-- Eye SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linejoin="round" />
+                                <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.8" />
+                            </svg>
+                        </div>
+                        <span class="inline-stat-number" id="statsViewers" data-value="0">—</span>
+                        <span class="inline-stat-label">Viewers</span>
+                    </div>
+
+                    <div class="inline-stat">
+                        <div class="inline-stat-icon">
+                            <!-- Heart SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21s-6.7-4.35-9.33-8.42C-1.2 7.4 
+                         2.02 2 6.77 2c2.02 0 3.89 1.1 5.23 3.02C13.34 3.1 
+                         15.2 2 17.23 2 21.98 2 25.2 7.4 21.33 12.58 18.7 
+                         16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="inline-stat-number" id="statsLikes" data-value="0">—</span>
+                        <span class="inline-stat-label">Likes</span>
+                    </div>
+
+                    <div class="inline-stat">
+                        <div class="inline-stat-icon">
+                            <!-- Message Bubble SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16v12H7l-3 3V4z" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="inline-stat-number" id="statsComments" data-value="0">—</span>
+                        <span class="inline-stat-label">Comments</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal (contains IG-like buttons + double-tap on modal-left image) -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-left" id="modalLeft"><img id="modalImg" src="" alt=""></div>
+            <div class="modal-right">
+                <button class="modal-close" id="closeModal">X</button>
+                <div class="modal-right-content">
+                    <div class="modal-description" id="modalDescription">
+                        <div class="modal-title" id="modalTitle"></div>
+                        <div class="modal-desc" id="modalDesc"></div>
+
+                        <!-- Actions (like/comment/share) -->
+                        <div class="modal-actions ig-actions" style="margin-top:10px;">
+                            <button class="insta-btn" id="likeBtn" aria-pressed="false" title="Like">
+                                <svg class="icon-heart" viewBox="0 0 48 48" width="30" height="30" fill="none"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path d="M34.3 6c-4.3 0-7.6 2.1-10.3 5.4C21.3 8.1 18 6 13.7 6 
+             7.6 6 3 10.7 3 16.9c0 12 16.7 21.6 21 23.7 
+             4.3-2.1 21-11.7 21-23.7C45 10.7 40.4 6 34.3 6z" />
+                                </svg>
+                            </button>
+                            <button class="insta-btn" id="focusComment" title="Comment">
+                                <svg class="icon-comment" viewBox="0 0 24 24" width="28" height="28" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <!-- Main circular bubble -->
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.93 5.89L2 22l4.11-1.93A9.95 9.95 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+                                </svg>
+
+
+
+                            </button>
+                            <button class="insta-btn" id="shareBtn" title="Share">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
+                                    <polyline points="16 6 12 2 8 6" />
+                                    <line x1="12" y1="2" x2="12" y2="15" />
+                                </svg>
+                            </button>
+                            <div class="modalLikeCount" id="modalLikeCount"
+                                style="color:var(--muted);margin-left:auto;font-weight:700">0 likes </div>
+
+                        </div>
+                    </div>
+                    <!-- Comments -->
+                    <div class="comments" id="commentsArea"></div>
+
+                    <!-- Add comment input -->
+                    <div class="add-comment">
+                        <input type="text" id="commentInput" placeholder="Leave a Comment here...">
+                        <button class="btn" id="postComment"> Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero frame fullscreen overlay -->
+    <div id="heroFrameOverlay" class="hero-frame-overlay" aria-hidden="true">
+        <img id="heroFrameFullImg" src="" alt="">
+    </div>
+    <footer>Â© <span id="year"></span> Sining Laban sa Katiwalian</footer>
+    <script type="module" src="assets/js/script.js"></script>
+
+    <div id="popup" class="custom-popup"></div>
+
+
+</body>
+<!-- User Profile Setup Modal -->
+<!-- User Profile Setup Modal -->
+<div id="userSetupModal" class="user-setup-modal hidden">
+    <div class="user-setup-card">
+        <!-- Floating particles background -->
+        <div class="particles-bg">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <h2>Welcome to Sining Laban sa Katiwalian</h2>
+        <p>Choose how you'd like to participate:</p>
+
+        <div class="profile-options">
+            <button class="profile-option-btn" id="chooseNameBtn">
+                <div class="profile-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+                </div>
+                <span>Choose a Name</span>
+            </button>
+        </div>
+
+        <a href="#" class="stay-anonymous-link" id="stayAnonymousBtn">Stay Anonymous</a>
+
+        <!-- Name Input Section (hidden initially) -->
+        <div class="name-input-section" id="nameInputSection" style="display: none;">
+            <input type="text" id="displayNameInput" placeholder="Enter your display name" maxlength="20">
+
+            <div class="avatar-selection">
+                <p>Choose an avatar:</p>
+                <div class="avatar-grid">
+                    <div class="avatar-option" data-avatar="user">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="artist">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="palette">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="8" cy="10" r="1.5" fill="currentColor" />
+                            <circle cx="16" cy="10" r="1.5" fill="currentColor" />
+                            <circle cx="12" cy="16" r="1.5" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="heart">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="star">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="fire">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13.5 1c-.8 2-1.8 4.5-2.5 7-.6-3-1.2-5-1.5-6C7 4.5 4 9 4 13c0 4.4 3.6 8 8 8s8-3.6 8-8c0-3.7-2.5-7.4-6.5-12z" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="sparkle">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1l2.4 7.2h7.6l-6.2 4.5 2.4 7.3-6.2-4.5-6.2 4.5 2.4-7.3L2 8.2h7.6z" />
+                        </svg>
+                    </div>
+                    <div class="avatar-option" data-avatar="shield">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" id="confirmNameBtn">Confirm</button>
+        </div>
+    </div>
+</div>
+
+</html>
