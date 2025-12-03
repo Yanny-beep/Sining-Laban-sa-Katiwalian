@@ -72,4 +72,22 @@ Powered by Supabase Realtime:
 ---
 
 ## 📂 Project Structure
+/
+├── index.html # Main virtual museum
+├── style.css # UI layout, animations, responsiveness
+├── script.js # Gallery logic, modals, filters, realtime, profiles
+├── assets/
+│ ├── icons/
+│ ├── visual arts/
+│ ├── literary arts/
+│ ├── applied arts/
+│ └── multimedia/
+└── README.md
+
+
+---
+
+## 🖋️ Authors & Contributors
+### Sining Laban sa Katiwalian – Virtual Museum
+###Created for art appreciation, education, and social awareness.
 
